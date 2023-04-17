@@ -11,3 +11,6 @@ npm run lint-staged || (
     ";
     false;
 )
+
+echo '✅✅✅✅ pre-commit completed successfully! ✅✅✅✅'
+

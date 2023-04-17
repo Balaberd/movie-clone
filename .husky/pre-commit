@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "pre-commit started"
+
+npm run lint-staged || (
+    echo " 
+    ❌❌❌ Что-то пошло не так! ❌❌❌
+    🔨👷 Для проверки используй:
+            npm run lint
+    ";
+    false;
+)

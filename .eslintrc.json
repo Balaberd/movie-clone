@@ -2,20 +2,36 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:@next/next/recommended",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "testing-library",
     "prettier"
   ],
-  "plugins": ["testing-library", "prettier"],
   "overrides": [
     {
-      "files": ["!*.test.*"],
-      "extends": ["airbnb-base", "prettier"],
+      "files": [
+        "!*.test.*"
+      ],
+      "extends": [
+        "airbnb-base",
+        "prettier"
+      ],
       "rules": {
-        "quotes": ["error", "double"]
+        "quotes": [
+          "error",
+          "double"
+        ]
       }
     },
     {
-      "files": ["*.test.*"],
-      "extends": ["plugin:testing-library/react"]
+      "files": [
+        "*.test.*"
+      ],
+      "extends": [
+        "plugin:testing-library/react"
+      ]
     }
   ],
   "rules": {

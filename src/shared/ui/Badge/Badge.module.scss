@@ -1,0 +1,21 @@
+.badge {
+  padding: 2px 8px;
+
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  color: $color-sofia;
+
+  position: absolute;
+
+  border-radius: 10px;
+  text-align: center;
+}
+
+.iviChoose {
+  background-color: var(--color-madrid);
+}
+
+.exclusive {
+  background-color: var(--color-hanoi);
+}

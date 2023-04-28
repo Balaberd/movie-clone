@@ -1,0 +1,14 @@
+@import "./reset.scss";
+@import "./vars.scss";
+@import "./templates.scss";
+
+@import "@/shared/index.scss";
+
+html {
+  font-family: var(--font-main);
+}
+
+main {
+  @extend %template-container;
+  font-family: IconFont;
+}

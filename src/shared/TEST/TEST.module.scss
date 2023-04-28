@@ -1,0 +1,13 @@
+.test {
+  position: relative;
+  background-color: var(--color-hanoi);
+}
+
+.test::after {
+  content: "\E051";
+  font-family: Ico;
+
+  position: absolute;
+  top: 30px;
+  left: 0;
+}

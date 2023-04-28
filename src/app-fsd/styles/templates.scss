@@ -1,0 +1,9 @@
+%template-container {
+  width: var(--container-width);
+  margin: 0 auto;
+
+  @media (max-width: var(--container-width)) {
+    width: 100%;
+    margin: 0 32px 0 32px;
+  }
+}

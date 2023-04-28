@@ -1,3 +1,4 @@
+import { Carusel } from "@/shared/ui/Carusel/Carusel";
 import Head from "next/head";
 
 export default function Home() {
@@ -9,7 +10,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>Hello main</main>
+      <main>
+        Hello main
+        <Carusel>
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+        </Carusel>
+      </main>
     </>
   );
 }

@@ -39,16 +39,12 @@ export const Carusel: FC<Props> = ({ children }) => {
         ref={prevButtonRef}
         onClick={() => swiperRef.current?.slidePrev()}
         className={cn(styles.navButton, styles.navButton_prev)}
-      >
-        Prev1
-      </button>
+      ></button>
       <button
         ref={nextButtonRef}
         onClick={() => swiperRef.current?.slideNext()}
         className={cn(styles.navButton, styles.navButton_next)}
-      >
-        Next
-      </button>
+      ></button>
     </div>
   );
 };

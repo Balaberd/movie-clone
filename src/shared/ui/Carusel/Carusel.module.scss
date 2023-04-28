@@ -7,12 +7,30 @@
   top: 0;
   height: 100%;
 
+  font-family: IconFont;
+  color: var(--color-sofia);
+  opacity: 0.72;
+
+  font-size: 31px;
+
   &_prev {
     left: -40px;
+
+    &::before {
+      content: "\E040";
+    }
   }
 
   &_next {
     right: -40px;
+
+    &::before {
+      content: "\E047";
+    }
+  }
+
+  &:hover {
+    opacity: 1;
   }
 }
 

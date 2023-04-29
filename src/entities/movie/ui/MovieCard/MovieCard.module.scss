@@ -1,0 +1,60 @@
+.movieCard {
+  color: var(--color-havana);
+}
+
+.poster {
+  &:hover .movieProperties {
+    visibility: visible;
+  }
+
+  width: 153px;
+  height: 235px;
+}
+
+.movieProperties {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+
+  visibility: hidden;
+
+  background-color: var(--color-transparentBlack);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .actionBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .movieInfo {
+    font-size: 13px;
+
+    .rating {
+      font-size: 24px;
+      color: var(--color-sofia);
+    }
+  }
+}
+
+.titleBlock {
+  margin-top: 8px;
+  .title {
+    overflow: hidden;
+
+    font-weight: var(--font-weight-amphiris);
+    font-size: var(--font-size-amphiris);
+    line-height: var(--line-height-amphiris);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .subtitle {
+    font-weight: var(--font-weight-marynae);
+    font-size: var(--font-size-marynae);
+    line-height: var(--line-height-marynae);
+  }
+}

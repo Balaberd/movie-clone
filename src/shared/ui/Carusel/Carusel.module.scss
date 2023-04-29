@@ -6,12 +6,17 @@
   position: absolute;
   top: 0;
   height: 100%;
+  width: 40px;
 
   font-family: IconFont;
   color: var(--color-sofia);
-  opacity: 0.72;
+  opacity: var(--opacity-hemza);
 
   font-size: 31px;
+
+  transition: 0.4s;
+
+  cursor: pointer;
 
   &_prev {
     left: -40px;
@@ -30,7 +35,11 @@
   }
 
   &:hover {
-    opacity: 1;
+    opacity: var(--opacity-imi);
+  }
+
+  .disabled {
+    visibility: hidden;
   }
 }
 

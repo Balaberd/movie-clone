@@ -24,7 +24,9 @@ export const Carusel: FC<Props> = ({ children }) => {
         navigation={{
           prevEl: prevButtonRef.current,
           nextEl: nextButtonRef.current,
+
           hideOnClick: true,
+          enabled: true,
           disabledClass: styles.disabled,
         }}
         onBeforeInit={(swiper) => {

@@ -1,12 +1,240 @@
 :root {
   // *********************************    COLORS    ********************************* //
-  --color-metz: #100e19;
-  --color-havana: #d9d7e0;
+  --color-osaka: #000000;
+  --color-zeila: #222222;
+  --color-erbil: #333333;
+  --color-kabul: #110e20;
+  --color-london: #25213f;
+  --color-tanga: #3a355a;
+  --color-jaffa: #5f5887;
+  --color-fes: #938db7;
+  --color-dili: #c8c3e8;
+  --color-nara: #e7e3ff;
+  --color-santiago: #f6f5ff;
   --color-sofia: #ffffff;
+  --color-ibiza: #07050e;
+  --color-varna: #1f1b2e;
+  --color-berbera: #312b45;
+  --color-dublin: #7e798f;
+  --color-axum: #a5a1b2;
+  --color-mexico: #a5a1b2;
+  --color-tbilisi: #d9d7e0;
+  --color-havana: #d9d7e0;
+  --color-alexandria: #00a5ff;
+  --color-victoria: #0171ff;
+  --color-kediri: #360311;
+  --color-pattani: #9e0b32;
   --color-madrid: #ea003d;
+  --color-kano: #ff6e94;
+  --color-argos: #ffb3c7;
+  --color-baku: #ffdbe5;
+  --color-palermo: #fff2f6;
+  --color-darwin: #300900;
+  --color-adelaide: #b33012;
   --color-hanoi: #ff542e;
+  --color-muar: #ff8469;
+  --color-sydney: #ffbaab;
+  --color-hobart: #ffded6;
+  --color-moroni: #fff3f0;
+  --color-worms: #0d1404;
+  --color-homs: #2e4014;
+  --color-kutaisi: #4a6623;
+  --color-beirut: #73a32f;
+  --color-flores: #a9d171;
+  --color-rey: #d7ebbc;
+  --color-nitra: #f2f7eb;
+  --color-metz: #100e19;
+  --color-york: #a869f0;
+  --color-rome: #e6ae2e;
+  --color-vkontakte: #0077ff;
+  --color-twitter: #1da1f2;
+  --color-googleplus: #db4437;
+  --color-odnoklassniki: #ee8208;
+  --color-yandex_yellow: #ffcc00;
+  --color-yandex_red: #ff0000;
+  --color-mailru_blue: #115ff9;
+  --color-mailru_gold: #ffa520;
+  --color-telegram: #0088cc;
+  --color-whatsapp: #25d366;
+  --color-viber: #7360f2;
+  --color-kinopoisk: #ff6600;
+  --color-imdb: #f5c518;
+  --color-citibank: #003b70;
+  --color-gazprombank: #02356c;
+  --color-vtb24: #0a2972;
+  --color-uralsib: #1e398d;
+  --color-psbbank: #2647a3;
+  --color-open: #00bbe4;
+  --color-unicredit: #e30613;
+  --color-tinkoff: #231f20;
+  --color-sberbank: #1a9f29;
+  --color-mkb: #b3002d;
+  --color-rosbank: #e7002a;
+  --color-alfabank: #f03226;
+  --color-raifeisen: #fff104;
+  --color-paypal: #0070ba;
+  --color-planeta: #3498db;
+  --color-samsung: #1428a0;
 
   --color-transparentBlack: rgba(7, 5, 14, 0.8);
+
+  // *********************************    FONTS-STYLES    ********************************* //
+
+  --font-size-egoria: 96px;
+  --line-height-egoria: 96px;
+  --font-weight-egoria: 700;
+
+  --font-size-bormea: 88px;
+  --line-height-bormea: 88px;
+  --font-weight-bormea: 700;
+
+  --font-size-celano: 80px;
+  --line-height-celano: 80px;
+  --font-weight-celano: 700;
+
+  --font-size-pareia: 56px;
+  --line-height-pareia: 56px;
+  --font-weight-pareia: 700;
+
+  --font-size-menippe: 40px;
+  --line-height-menippe: 44px;
+  --font-weight-menippe: 700;
+
+  --font-size-nomira: 32px;
+  --line-height-nomira: 36px;
+  --font-weight-nomira: 700;
+
+  --font-size-kelaria: 32px;
+  --line-height-kelaria: 36px;
+  --font-weight-kelaria: 400;
+
+  --font-size-phanio: 28px;
+  --line-height-phanio: 36px;
+  --font-weight-phanio: 400;
+
+  --font-size-thebe: 28px;
+  --line-height-thebe: 32px;
+  --font-weight-thebe: 700;
+
+  --font-size-daeira: 24px;
+  --line-height-daeira: 32px;
+  --font-weight-daeira: 400;
+
+  --font-size-crephusa: 24px;
+  --line-height-crephusa: 28px;
+  --font-weight-crephusa: 700;
+
+  --font-size-nerin: 20px;
+  --line-height-nerin: 28px;
+  --font-weight-nerin: 700;
+
+  --font-size-oronia: 20px;
+  --line-height-oronia: 28px;
+  --font-weight-oronia: 400;
+
+  --font-size-melia: 20px;
+  --line-height-melia: 24px;
+  --font-weight-melia: 700;
+
+  --font-size-rhetia: 20px;
+  --line-height-rhetia: 24px;
+  --font-weight-rhetia: 500;
+
+  --font-size-ideia: 20px;
+  --line-height-ideia: 24px;
+  --font-weight-ideia: 400;
+
+  --font-size-opis: 17px;
+  --line-height-opis: 24px;
+  --font-weight-opis: 700;
+
+  --font-size-amete: 17px;
+  --line-height-amete: 24px;
+  --font-weight-amete: 500;
+
+  --font-size-samilea: 17px;
+  --line-height-samilea: 24px;
+  --font-weight-samilea: 400;
+
+  --font-size-ida: 17px;
+  --line-height-ida: 22px;
+  --font-weight-ida: 700;
+
+  --font-size-eralato: 17px;
+  --line-height-eralato: 22px;
+  --font-weight-eralato: 500;
+
+  --font-size-heliria: 17px;
+  --line-height-heliria: 22px;
+  --font-weight-heliria: 400;
+
+  --font-size-morea: 15px;
+  --line-height-morea: 22px;
+  --font-weight-morea: 700;
+
+  --font-size-helia: 15px;
+  --line-height-helia: 22px;
+  --font-weight-helia: 500;
+
+  --font-size-clonia: 15px;
+  --line-height-clonia: 22px;
+  --font-weight-clonia: 400;
+
+  --font-size-clymenti: 15px;
+  --line-height-clymenti: 20px;
+  --font-weight-clymenti: 700;
+
+  --font-size-amphiris: 15px;
+  --line-height-amphiris: 20px;
+  --font-weight-amphiris: 500;
+
+  --font-size-metioche: 15px;
+  --line-height-metioche: 20px;
+  --font-weight-metioche: 400;
+
+  --font-size-petraea: 13px;
+  --line-height-petraea: 16px;
+  --font-weight-petraea: 700;
+
+  --font-size-marynae: 13px;
+  --line-height-marynae: 16px;
+  --font-weight-marynae: 500;
+
+  --font-size-kleodora: 13px;
+  --line-height-kleodora: 16px;
+  --font-weight-kleodora: 400;
+
+  --font-size-naise: 10px;
+  --line-height-naise: 12px;
+  --font-weight-naise: 700;
+
+  --font-size-maira: 10px;
+  --line-height-maira: 12px;
+  --font-weight-maira: 500;
+
+  --font-size-mystis: 10px;
+  --line-height-mystis: 12px;
+  --font-weight-mystis: 400;
+
+  --font-size-parnas: 8px;
+  --line-height-parnas: 10px;
+  --font-weight-parnas: 700;
+
+  // *********************************    OPACITY    ********************************* //
+  --opacity-odo: 0;
+  --opacity-jabe: 0.08;
+  --opacity-bana: 0.16;
+  --opacity-kurza: 0.24;
+  --opacity-akbu: 0.32;
+  --opacity-pake: 0.4;
+  --opacity-tesa: 0.48;
+  --opacity-zeton: 0.56;
+  --opacity-anie: 0.64;
+  --opacity-hemza: 0.72;
+  --opacity-sedra: 0.8;
+  --opacity-dere: 0.88;
+  --opacity-kima: 0.96;
+  --opacity-imi: 1;
 
   // *********************************    BASE-FONT    ********************************* //
   --font-main: Arial;

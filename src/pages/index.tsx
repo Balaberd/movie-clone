@@ -1,3 +1,4 @@
+import { MovieCard } from "@/entities";
 import { Carusel } from "@/shared/ui/Carusel/Carusel";
 import Head from "next/head";
 
@@ -11,21 +12,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        Hello main
+        MAIN PAGE
         <Carusel>
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
+          <MovieCard imageUrl="https://thumbs.dfs.ivi.ru/storage8/contents/2/a/3edb4555fdfba2b4b3963455a94eca.jpg/234x360//?q=85" />
+          <MovieCard imageUrl="https://thumbs.dfs.ivi.ru/storage8/contents/2/a/3edb4555fdfba2b4b3963455a94eca.jpg/234x360//?q=85" />
         </Carusel>
       </main>
     </>

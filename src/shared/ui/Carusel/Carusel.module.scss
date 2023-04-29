@@ -6,13 +6,40 @@
   position: absolute;
   top: 0;
   height: 100%;
+  width: 40px;
+
+  font-family: IconFont;
+  color: var(--color-sofia);
+  opacity: var(--opacity-hemza);
+
+  font-size: 31px;
+
+  transition: 0.4s;
+
+  cursor: pointer;
 
   &_prev {
     left: -40px;
+
+    &::before {
+      content: "\E040";
+    }
   }
 
   &_next {
     right: -40px;
+
+    &::before {
+      content: "\E047";
+    }
+  }
+
+  &:hover {
+    opacity: var(--opacity-imi);
+  }
+
+  .disabled {
+    visibility: hidden;
   }
 }
 

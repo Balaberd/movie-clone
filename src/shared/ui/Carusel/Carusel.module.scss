@@ -1,0 +1,21 @@
+.carusel {
+  position: relative;
+}
+
+.navButton {
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+  &_prev {
+    left: -40px;
+  }
+
+  &_next {
+    right: -40px;
+  }
+}
+
+.disabled {
+  visibility: hidden;
+}

@@ -1,0 +1,28 @@
+.rating {
+  color: var(--color-axum);
+  font-size: var(--font-size-kleodora);
+  line-height: var(--line-height-kleodora);
+  font-weight: var(--font-weight-kleodora);
+}
+
+.numbers {
+  margin-bottom: 4px;
+  display: flex;
+  color: var(--color-sofia);
+
+  &__firstNum {
+    font-size: var(--font-size-crephusa);
+    font-weight: var(--font-weight-crephusa);
+    line-height: var(--line-height-crephusa);
+  }
+
+  &__secondNum {
+    font-size: var(--font-size-melia);
+    font-weight: var(--font-weight-melia);
+    line-height: var(--line-height-melia);
+  }
+}
+
+.ratingLine {
+  margin-top: 4px;
+}

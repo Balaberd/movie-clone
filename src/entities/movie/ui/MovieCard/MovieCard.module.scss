@@ -1,14 +1,25 @@
 .movieCard {
   color: var(--color-havana);
+
+  &:hover {
+    .title {
+      color: var(--color-sofia);
+    }
+    .movieProperties {
+      opacity: 1;
+    }
+    .poster {
+      transform: scale(1.04) translateY(0);
+    }
+  }
 }
 
 .poster {
-  &:hover .movieProperties {
-    visibility: visible;
-  }
+  transition: 0.4s;
 
-  width: 153px;
-  height: 235px;
+  width: 100%;
+  aspect-ratio: 1/1.535; // устанавливаем соотношение сторон 1/1.535
+  height: calc(100% / aspect-ratio);
 }
 
 .movieProperties {
@@ -16,7 +27,9 @@
   height: 100%;
   padding: 16px;
 
-  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.4s;
 
   background-color: var(--color-transparentBlack);
 
@@ -31,11 +44,37 @@
   }
 
   .movieInfo {
-    font-size: 13px;
+    color: var(--color-tbilisi);
+
+    font-size: var(--font-size-kleodora);
+    font-weight: var(--font-weight-kleodora);
+    line-height: var(--line-height-kleodora);
 
     .rating {
-      font-size: 24px;
+      display: flex;
       color: var(--color-sofia);
+
+      &__firstNum {
+        font-size: var(--font-size-crephusa);
+        font-weight: var(--font-weight-crephusa);
+        line-height: var(--line-height-crephusa);
+      }
+
+      &__secondNum {
+        font-size: var(--font-size-melia);
+        font-weight: var(--font-weight-melia);
+        line-height: var(--line-height-melia);
+      }
+    }
+
+    .info {
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .duration {
+      display: inline-block;
+      margin-top: 4px;
     }
   }
 }
@@ -43,6 +82,8 @@
 .titleBlock {
   margin-top: 8px;
   .title {
+    transition: 0.4s;
+
     overflow: hidden;
 
     font-weight: var(--font-weight-amphiris);

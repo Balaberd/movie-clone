@@ -1,5 +1,4 @@
-import { MovieCard } from "@/entities";
-import { Carusel } from "@/shared/ui/Carusel/Carusel";
+import { MainPage } from "@/pages-fsd";
 import Head from "next/head";
 
 export default function Home() {
@@ -12,11 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        MAIN PAGE
-        <Carusel>
-          <MovieCard imageUrl="https://thumbs.dfs.ivi.ru/storage8/contents/2/a/3edb4555fdfba2b4b3963455a94eca.jpg/234x360//?q=85" />
-          <MovieCard imageUrl="https://thumbs.dfs.ivi.ru/storage8/contents/2/a/3edb4555fdfba2b4b3963455a94eca.jpg/234x360//?q=85" />
-        </Carusel>
+        <MainPage />
       </main>
     </>
   );

@@ -1,16 +1,12 @@
 @import "./reset.scss";
 @import "./vars.scss";
-@import "./templates.scss";
 
 @import "@/shared/index.scss";
 
 html {
   font-family: var(--font-main);
-
-  background-color: gray;
 }
 
 main {
-  @extend %template-container;
   font-family: IconFont;
 }

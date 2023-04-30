@@ -2,8 +2,8 @@
   width: var(--container-width);
   margin: 0 auto;
 
-  @media (max-width: var(--container-width)) {
+  @media (max-width: 1216px) {
     width: 100%;
-    margin: 0 32px 0 32px;
+    padding: 0 32px;
   }
 }

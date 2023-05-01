@@ -7,7 +7,7 @@ import {
   SCREEN_WIDTH_2,
   SCREEN_WIDTH_3,
   SCREEN_WIDTH_4,
-} from "@/widgets/const/width";
+} from "@/widgets/const/screenWidths";
 import styles from "./MovieSelectionByType.module.scss";
 
 interface Props {

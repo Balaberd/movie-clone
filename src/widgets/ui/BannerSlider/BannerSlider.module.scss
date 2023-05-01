@@ -1,0 +1,23 @@
+.bannerSlider {
+  // background-color: aliceblue;
+}
+
+.carusel {
+  overflow: visible;
+  width: calc((var(--container-width) * 3) + 32px);
+  transform: translate(calc(var(--container-width) * -1 - 16px));
+}
+
+.wrapper {
+}
+
+.slide {
+  opacity: 0.3;
+  transition: 0.3s;
+
+  z-index: -1;
+
+  &_active {
+    opacity: 1;
+  }
+}

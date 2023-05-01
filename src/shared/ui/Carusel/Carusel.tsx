@@ -7,13 +7,24 @@ import styles from "./Carusel.module.scss";
 
 interface Props {
   children: ReactElement[];
+  className?: string;
   wrapperClass?: string;
   spaceBetween?: number;
   slidesPerView: number;
   slidesPerGroup: number;
+  slideClass?: string;
+  loop?: boolean;
+  initialSlide?: number;
+  slideActiveClass?: string;
+  centeredSlides?: boolean;
 }
 
-export const Carusel: FC<Props> = ({ children, ...props }) => {
+export const Carusel: FC<Props> = ({
+  children,
+  slideClass,
+  slideActiveClass,
+  ...props
+}) => {
   const swiperRef = useRef<SwiperType>();
   const prevButtonRef = useRef(null);
   const nextButtonRef = useRef(null);
@@ -22,6 +33,7 @@ export const Carusel: FC<Props> = ({ children, ...props }) => {
     <div className={styles.carusel}>
       <Swiper
         {...props}
+        lazyPreloadPrevNext={2}
         modules={[Navigation]}
         navigation={{
           prevEl: prevButtonRef.current,
@@ -34,9 +46,12 @@ export const Carusel: FC<Props> = ({ children, ...props }) => {
           swiperRef.current = swiper;
         }}
       >
-        {children.map((item, index) => (
-          <SwiperSlide key={index} className={styles.slide}>
-            {item}
+        {children.map((Item, index) => (
+          <SwiperSlide key={index} className={cn(styles.slide)}>
+            {({ isActive }) => {
+              const classes = isActive ? slideActiveClass : "";
+              return <div className={cn(slideClass, classes)}>{Item}</div>;
+            }}
           </SwiperSlide>
         ))}
       </Swiper>

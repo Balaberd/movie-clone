@@ -78,7 +78,7 @@
     transition: 0.4s;
 
     overflow: hidden;
-
+    color: var(--color-tbilisi);
     font-weight: var(--font-weight-amphiris);
     font-size: var(--font-size-amphiris);
     line-height: var(--line-height-amphiris);
@@ -87,6 +87,7 @@
   }
 
   .subtitle {
+    color: var(--color-axum);
     font-weight: var(--font-weight-marynae);
     font-size: var(--font-size-marynae);
     line-height: var(--line-height-marynae);

@@ -45,7 +45,7 @@ export const MovieCard: FC<Props> = ({
     </Poster>
     <div className={styles.titleBlock}>
       <h6 className={styles.title}>{title}</h6>
-      <span className={styles.subtitle}>subtitle</span>
+      <span className={styles.subtitle}>Бесплатно</span>
     </div>
   </div>
 );

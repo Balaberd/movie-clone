@@ -17,12 +17,18 @@ interface Props {
   initialSlide?: number;
   slideActiveClass?: string;
   centeredSlides?: boolean;
+  bottonsClass?: string;
+  buttonPrevClass?: string;
+  buttonNextClass?: string;
 }
 
 export const Carusel: FC<Props> = ({
   children,
   slideClass,
   slideActiveClass,
+  bottonsClass,
+  buttonPrevClass,
+  buttonNextClass,
   ...props
 }) => {
   const swiperRef = useRef<SwiperType>();
@@ -58,12 +64,22 @@ export const Carusel: FC<Props> = ({
       <button
         ref={prevButtonRef}
         onClick={() => swiperRef.current?.slidePrev()}
-        className={cn(styles.navButton, styles.navButton_prev)}
+        className={cn(
+          styles.navButton,
+          styles.navButton_prev,
+          bottonsClass,
+          buttonPrevClass
+        )}
       ></button>
       <button
         ref={nextButtonRef}
         onClick={() => swiperRef.current?.slideNext()}
-        className={cn(styles.navButton, styles.navButton_next)}
+        className={cn(
+          styles.navButton,
+          styles.navButton_next,
+          bottonsClass,
+          buttonNextClass
+        )}
       ></button>
     </div>
   );

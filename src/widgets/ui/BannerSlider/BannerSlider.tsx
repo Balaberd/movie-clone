@@ -9,7 +9,6 @@ export const BannerSlider: FC = () => {
 
   return (
     <Carusel
-      wrapperClass={styles.wrapper}
       className={styles.carusel}
       centeredSlides={true}
       loop={true}
@@ -18,6 +17,9 @@ export const BannerSlider: FC = () => {
       slidesPerGroup={1}
       slideClass={styles.slide}
       slideActiveClass={styles.slide_active}
+      bottonsClass={styles.button}
+      buttonNextClass={styles.button_next}
+      buttonPrevClass={styles.button_prev}
     >
       {elements}
     </Carusel>

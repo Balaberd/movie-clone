@@ -16,3 +16,9 @@
 .carusel {
   padding: 8px 0;
 }
+
+.button {
+  &::before {
+    top: 40%;
+  }
+}

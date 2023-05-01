@@ -1,23 +1,45 @@
-.bannerSlider {
-  // background-color: aliceblue;
-}
+@import "@/shared/index.scss";
 
 .carusel {
-  overflow: visible;
-  width: calc((var(--container-width) * 3) + 32px);
-  transform: translate(calc(var(--container-width) * -1 - 16px));
+  width: $width-container * 3 + 32px;
+  transform: translate($width-container * -1 - 16px);
+
+  @media (max-width: $width-container) {
+    width: calc(100% * 3 + 32px);
+    $width: 100%;
+    transform: translate(calc(100vw * -1 + 48px));
+  }
 }
 
-.wrapper {
-}
+.button {
+  width: $width-container + 10px;
 
-.slide {
-  opacity: 0.3;
-  transition: 0.3s;
+  background-image: linear-gradient(
+    90deg,
+    rgba(31, 27, 46, 0),
+    rgba(31, 27, 46, 0.72)
+  );
 
-  z-index: -1;
+  &_prev {
+    background-color: linear-gradient(
+      90deg,
+      rgba(31, 27, 46, 0),
+      rgba(31, 27, 46, 0.72)
+    );
+    left: calc($width-container * -1 - 16px);
 
-  &_active {
-    opacity: 1;
+    &::before {
+      position: absolute;
+    }
+  }
+
+  &_next {
+    background-image: linear-gradient(
+      270deg,
+      rgba(31, 27, 46, 0),
+      rgba(31, 27, 46, 0.72)
+    );
+
+    right: calc($width-container * -1 - 16px);
   }
 }

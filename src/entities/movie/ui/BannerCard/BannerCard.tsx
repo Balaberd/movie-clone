@@ -12,7 +12,11 @@ export const BannerCard: FC<Props> = ({
   className,
   imageUrl = "https://thumbs.dfs.ivi.ru/storage26/contents/4/5/0a9a5152f4ef1c2358c8b22bbdbebf.jpg/1216x524/?q=85",
 }) => (
-  <Poster classNames={cn(styles.poster, className)} imageUrl={imageUrl}>
+  <Poster
+    classNames={cn(styles.poster, className)}
+    imageUrl={imageUrl}
+    title={"SOME MOVIE"}
+  >
     <div>SOME CONTENT</div>
   </Poster>
 );

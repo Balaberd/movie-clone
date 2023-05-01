@@ -5,26 +5,26 @@ import styles from "./MovieCard.module.scss";
 import { Rating } from "./Rating/Rating";
 
 interface Props {
-  imageUrl?: string;
-  rating?: number;
-  year?: string;
-  ganre?: string;
-  country?: string;
-  title?: string;
-  duration?: string;
+  imageUrl: string;
+  rating: number;
+  year: string;
+  ganre: string;
+  country: string;
+  title: string;
+  duration: string;
 }
 
 export const MovieCard: FC<Props> = ({
-  imageUrl = "https://thumbs.dfs.ivi.ru/storage6/contents/4/6/38a8b010f1a859fb3c709976fa8d1e.jpg/234x360//?q=85",
-  rating = 8.6,
-  year = 2013,
-  ganre = "Фэнтези",
-  country = "США",
-  title = "Хоббит: Пустошь Смауга",
-  duration = "154 минуты",
+  imageUrl,
+  rating,
+  year,
+  ganre,
+  country,
+  title,
+  duration,
 }) => (
   <div className={styles.movieCard}>
-    <Poster classNames={cn(styles.poster)} imageUrl={imageUrl}>
+    <Poster classNames={cn(styles.poster)} imageUrl={imageUrl} title={title}>
       <div className={styles.movieProperties}>
         <div className={styles.actionBlock}>
           <div>1</div>

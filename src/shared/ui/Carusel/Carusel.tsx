@@ -39,7 +39,6 @@ export const Carusel: FC<Props> = ({
     <div className={styles.carusel}>
       <Swiper
         {...props}
-        lazyPreloadPrevNext={2}
         modules={[Navigation]}
         navigation={{
           prevEl: prevButtonRef.current,

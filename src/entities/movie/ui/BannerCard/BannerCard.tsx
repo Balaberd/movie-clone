@@ -1,22 +1,35 @@
 import { FC } from "react";
 import cn from "classnames";
 import { Poster } from "@/shared";
+import Link from "next/link";
 import styles from "./BannerCard.module.scss";
 
 interface Props {
-  imageUrl?: string;
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
   className?: string;
 }
 
 export const BannerCard: FC<Props> = ({
+  id,
   className,
-  imageUrl = "https://thumbs.dfs.ivi.ru/storage26/contents/4/5/0a9a5152f4ef1c2358c8b22bbdbebf.jpg/1216x524/?q=85",
+  imageUrl,
+  title,
+  description,
 }) => (
-  <Poster
-    classNames={cn(styles.poster, className)}
-    imageUrl={imageUrl}
-    title={"SOME MOVIE"}
-  >
-    <div>SOME CONTENT</div>
-  </Poster>
+  <Link href={`/movies/${id}`}>
+    <Poster
+      classNames={cn(styles.poster, className)}
+      imageUrl={imageUrl}
+      title={title}
+    >
+      <div className={styles.content}>
+        <h4 className={styles.title}>Заголовок</h4>
+        <p className={styles.description}>{description}</p>
+        <div className={styles.button}>Смотреть бесплатно</div>
+      </div>
+    </Poster>
+  </Link>
 );

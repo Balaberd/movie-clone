@@ -1,10 +1,12 @@
 import { FC } from "react";
 import cn from "classnames";
 import { Poster } from "@/shared";
+import Link from "next/link";
 import styles from "./MovieCard.module.scss";
 import { Rating } from "./Rating/Rating";
 
 interface Props {
+  id: number;
   imageUrl: string;
   rating: number;
   year: string;
@@ -15,6 +17,7 @@ interface Props {
 }
 
 export const MovieCard: FC<Props> = ({
+  id,
   imageUrl,
   rating,
   year,
@@ -23,7 +26,7 @@ export const MovieCard: FC<Props> = ({
   title,
   duration,
 }) => (
-  <div className={styles.movieCard}>
+  <Link className={styles.movieCard} href={`/movies/${id}`}>
     <Poster classNames={cn(styles.poster)} imageUrl={imageUrl} title={title}>
       <div className={styles.movieProperties}>
         <div className={styles.actionBlock}>
@@ -47,5 +50,5 @@ export const MovieCard: FC<Props> = ({
       <h6 className={styles.title}>{title}</h6>
       <span className={styles.subtitle}>Бесплатно</span>
     </div>
-  </div>
+  </Link>
 );

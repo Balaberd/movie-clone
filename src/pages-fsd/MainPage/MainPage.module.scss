@@ -1,19 +1,14 @@
 @import "@/shared/index.scss";
 
 .mainPage {
-  //   background-color: var(--color-metz);
+  // background-color: var(--color-metz);
   background-color: gray;
-
-  //   color: var(--color-sofia);
 
   min-height: 100vh;
   overflow: hidden;
 }
 .container {
   @extend %template-container;
-}
-
-.banner {
 }
 
 .teaserBlock {

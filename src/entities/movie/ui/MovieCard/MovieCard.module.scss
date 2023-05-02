@@ -1,12 +1,14 @@
+@import "@/shared/index.scss";
+
 .movieCard {
-  color: var(--color-havana);
+  color: $color-havana;
 
   &:hover {
     .title {
-      color: var(--color-sofia);
+      color: $color-sofia;
     }
     .movieProperties {
-      opacity: 1;
+      opacity: $opacity-imi;
     }
     .poster {
       transform: scale(1.04) translateY(0);
@@ -16,9 +18,8 @@
 
 .poster {
   transition: 0.4s;
-
   width: 100%;
-  aspect-ratio: 1/1.535; // устанавливаем соотношение сторон 1/1.535
+  aspect-ratio: 1/1.535;
   height: calc(100% / aspect-ratio);
 }
 
@@ -31,7 +32,7 @@
 
   transition: 0.4s;
 
-  background-color: var(--color-transparentBlack);
+  background-color: $color-transparentBlack;
 
   display: flex;
   flex-direction: column;
@@ -50,11 +51,8 @@
   }
 
   .movieInfo {
-    color: var(--color-tbilisi);
-
-    font-size: var(--font-size-kleodora);
-    font-weight: var(--font-weight-kleodora);
-    line-height: var(--line-height-kleodora);
+    color: $color-tbilisi;
+    @include set-font(13px, 16px, 400);
 
     .description {
       margin-top: 4px;
@@ -76,20 +74,15 @@
   margin-top: 8px;
   .title {
     transition: 0.4s;
-
     overflow: hidden;
-    color: var(--color-tbilisi);
-    font-weight: var(--font-weight-amphiris);
-    font-size: var(--font-size-amphiris);
-    line-height: var(--line-height-amphiris);
+    color: $color-tbilisi;
+    @include set-font(15px, 20px, 500);
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
   .subtitle {
-    color: var(--color-axum);
-    font-weight: var(--font-weight-marynae);
-    font-size: var(--font-size-marynae);
-    line-height: var(--line-height-marynae);
+    color: $color-axum;
+    @include set-font(13px, 16px, 500);
   }
 }

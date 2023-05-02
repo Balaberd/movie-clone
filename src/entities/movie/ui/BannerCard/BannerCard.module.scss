@@ -1,6 +1,8 @@
+@import "@/shared/index.scss";
+
 .poster {
   width: 100%;
-  aspect-ratio: 1/0.4251; // устанавливаем соотношение сторон 1/0.4251
+  aspect-ratio: 1/0.4251;
   height: calc(100% / aspect-ratio);
 }
 
@@ -15,24 +17,19 @@
   justify-content: flex-end;
   gap: 20px;
 
-  color: var(--color-sofia);
-
-  font-size: var(--font-size-clonia);
-  font-weight: var(--font-weight-clonia);
-  line-height: var(--line-height-clonia);
+  color: $color-sofia;
+  @include set-font(15px, 22px, 400);
 }
 
 .title {
-  font-size: var(--font-size-pareia);
-  font-weight: var(--font-weight-pareia);
-  line-height: var(--line-height-pareia);
+  @include set-font(56px, 56px, 700);
 }
 
 .description {
 }
 
 .button {
-  background-color: var(--color-madrid);
+  background-color: $color-madrid;
   border-radius: 8px;
   padding: 9px 15px;
 }

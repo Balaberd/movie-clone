@@ -1,3 +1,5 @@
+@import "@/shared/index.scss";
+
 .wrapper {
   width: 100%;
   padding: 24px 0;
@@ -6,11 +8,9 @@
 .title {
   margin-bottom: 8px;
 
-  font-size: var(--font-size-crephusa);
-  line-height: var(--line-height-crephusa);
-  font-weight: var(--font-weight-crephusa);
+  @include set-font(24px, 28px, 700);
 
-  color: var(--color-sofia);
+  color: $color-sofia;
 }
 
 .carusel {

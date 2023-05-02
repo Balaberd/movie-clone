@@ -1,5 +1,4 @@
-.wrapper {
-}
+@import "@/shared/index.scss";
 
 .lineWrapper {
   width: 80%;
@@ -7,7 +6,7 @@
 
   border-radius: 2px;
 
-  background-color: var(--color-ratingLine-Background);
+  background-color: $color-ratingLine-Background;
 }
 
 .ratingLine {
@@ -15,5 +14,5 @@
   width: 25%;
   border-radius: 2px;
 
-  background-color: var(--color-madrid);
+  background-color: $color-madrid;
 }

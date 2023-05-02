@@ -1,7 +1,7 @@
 @import "@/shared/index.scss";
 
 .mainPage {
-  // background-color: var(--color-metz);
+  // background-color: $color-metz;
   background-color: gray;
 
   min-height: 100vh;
@@ -23,16 +23,14 @@
     align-items: center;
     justify-content: center;
 
-    color: var(--color-sofia);
-    font-size: var(--font-size-amphiris);
-    line-height: var(--line-height-amphiris);
-    font-weight: var(--font-weight-amphiris);
+    color: $color-sofia;
+    @include set-font(15px, 20px, 500);
 
     border-radius: 8px;
 
     &_subscription {
     }
-    background-color: var(--color-varna);
+    background-color: $color-varna;
 
     &_certificate {
     }

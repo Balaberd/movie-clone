@@ -1,3 +1,5 @@
+@import "@/shared/index.scss";
+
 .carusel {
   position: relative;
 }
@@ -13,8 +15,8 @@
   width: 40px;
 
   font-family: IconFont;
-  color: var(--color-sofia);
-  opacity: var(--opacity-hemza);
+  color: $color-sofia;
+  opacity: $opacity-hemza;
 
   font-size: 31px;
 
@@ -24,7 +26,7 @@
   z-index: 3;
 
   &:hover {
-    opacity: var(--opacity-imi);
+    opacity: $opacity-imi;
   }
   &:active {
     &::before {

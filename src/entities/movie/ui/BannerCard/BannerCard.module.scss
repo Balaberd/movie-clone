@@ -1,0 +1,38 @@
+.poster {
+  width: 100%;
+  aspect-ratio: 1/0.4251; // устанавливаем соотношение сторон 1/0.4251
+  height: calc(100% / aspect-ratio);
+}
+
+.content {
+  width: 40%;
+  height: 100%;
+  padding: 3%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-end;
+  gap: 20px;
+
+  color: var(--color-sofia);
+
+  font-size: var(--font-size-clonia);
+  font-weight: var(--font-weight-clonia);
+  line-height: var(--line-height-clonia);
+}
+
+.title {
+  font-size: var(--font-size-pareia);
+  font-weight: var(--font-weight-pareia);
+  line-height: var(--line-height-pareia);
+}
+
+.description {
+}
+
+.button {
+  background-color: var(--color-madrid);
+  border-radius: 8px;
+  padding: 9px 15px;
+}

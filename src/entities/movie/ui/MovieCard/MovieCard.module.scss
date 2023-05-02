@@ -25,7 +25,7 @@
 .movieProperties {
   width: 100%;
   height: 100%;
-  padding: 16px;
+  padding: 15%;
 
   opacity: 0;
 
@@ -35,9 +35,15 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
+
+  position: relative;
 
   .actionBlock {
+    position: absolute;
+    right: 15%;
+    top: 10%;
+
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -50,21 +56,8 @@
     font-weight: var(--font-weight-kleodora);
     line-height: var(--line-height-kleodora);
 
-    .rating {
-      display: flex;
-      color: var(--color-sofia);
-
-      &__firstNum {
-        font-size: var(--font-size-crephusa);
-        font-weight: var(--font-weight-crephusa);
-        line-height: var(--line-height-crephusa);
-      }
-
-      &__secondNum {
-        font-size: var(--font-size-melia);
-        font-weight: var(--font-weight-melia);
-        line-height: var(--line-height-melia);
-      }
+    .description {
+      margin-top: 4px;
     }
 
     .info {
@@ -85,7 +78,7 @@
     transition: 0.4s;
 
     overflow: hidden;
-
+    color: var(--color-tbilisi);
     font-weight: var(--font-weight-amphiris);
     font-size: var(--font-size-amphiris);
     line-height: var(--line-height-amphiris);
@@ -94,6 +87,7 @@
   }
 
   .subtitle {
+    color: var(--color-axum);
     font-weight: var(--font-weight-marynae);
     font-size: var(--font-size-marynae);
     line-height: var(--line-height-marynae);

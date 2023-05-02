@@ -1,13 +1,13 @@
 import { FC } from "react";
 import Link from "next/link";
 import cn from "classnames";
-import { MovieSelectionByType } from "@/widgets";
+import { BannerSlider, MovieSelectionByType } from "@/widgets";
 import styles from "./MainPage.module.scss";
 
 export const MainPage: FC = () => (
   <div className={styles.mainPage}>
     <div className={styles.container}>
-      <section className={styles.banner}>BANER SLIDER</section>
+      <BannerSlider />
       <section className={styles.teaserBlock}>
         <Link
           href="https://www.ivi.ru/subscribe?redirect_url=%2F"
@@ -22,7 +22,7 @@ export const MainPage: FC = () => (
           2
         </Link>
       </section>
-      <MovieSelectionByType type="MOVIE SELECTOR TYPE" />
+      <MovieSelectionByType type="Movie selector type" />
     </div>
   </div>
 );

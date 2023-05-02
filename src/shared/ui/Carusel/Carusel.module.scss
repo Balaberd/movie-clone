@@ -21,31 +21,42 @@
   transition: 0.4s;
 
   cursor: pointer;
-
-  &_prev {
-    left: -40px;
-
-    &::before {
-      content: "\E040";
-    }
-  }
-
-  &_next {
-    right: -40px;
-
-    &::before {
-      content: "\E047";
-    }
-  }
+  z-index: 3;
 
   &:hover {
     opacity: var(--opacity-imi);
   }
   &:active {
-    transform: scale(0.8);
+    &::before {
+      transform: scale(0.8);
+    }
+  }
+
+  &.disabled {
+    visibility: hidden;
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
   }
 }
 
-.disabled {
-  visibility: hidden;
+.navButton_prev {
+  left: -40px;
+
+  &::before {
+    content: "\E040";
+    right: 8px;
+  }
+}
+
+.navButton_next {
+  right: -40px;
+
+  &::before {
+    content: "\E047";
+
+    left: 8px;
+  }
 }

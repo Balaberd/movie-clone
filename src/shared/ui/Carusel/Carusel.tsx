@@ -14,7 +14,6 @@ interface Props {
   slidesPerGroup: number;
   slideClass?: string;
   loop?: boolean;
-  initialSlide?: number;
   slideActiveClass?: string;
   centeredSlides?: boolean;
   bottonsClass?: string;

@@ -22,9 +22,7 @@ export const Poster: FC<Props> = ({
       className={styles.image}
       src={imageUrl}
       alt={`постер к фильму ${title}`}
-      width={100}
-      height={100}
-      quality={100}
+      fill
     />
     {children}
   </div>

@@ -9,3 +9,13 @@
     padding: 0 32px;
   }
 }
+
+%template-link {
+  color: $color-sofia;
+  transition: 0.2s;
+  opacity: $opacity-tesa;
+
+  &:hover {
+    opacity: $opacity-imi;
+  }
+}

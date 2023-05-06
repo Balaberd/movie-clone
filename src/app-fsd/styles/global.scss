@@ -1,5 +1,10 @@
 @import "./reset.scss";
+@import "@/shared/index.scss";
 
-html {
+body {
+  // background-color: $color-metz;
+  background-color: gray;
+
   font-family: iviSans;
+  color: $color-sofia;
 }

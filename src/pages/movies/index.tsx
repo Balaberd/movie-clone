@@ -1,3 +1,5 @@
-const MoviesPage = () => <h1>MOVIES PAGE</h1>;
+import { MoviesPage } from "@/pages-fsd";
 
-export default MoviesPage;
+const movies = () => <MoviesPage />;
+
+export default movies;

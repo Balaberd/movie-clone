@@ -17,7 +17,7 @@ export const Poster: FC<Props> = ({
   children,
   title,
 }) => (
-  <div className={cn(styles.poster, classNames)}>
+  <div className={cn(styles.poster, classNames)} data-testid="custom-element">
     <Image
       className={styles.image}
       src={imageUrl}

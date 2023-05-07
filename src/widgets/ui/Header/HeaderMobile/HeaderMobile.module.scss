@@ -1,4 +1,4 @@
-@import "../../../shared/index.scss";
+@import "../../../../shared/index.scss";
 
 .headerMobile {
   width: 100%;
@@ -16,6 +16,12 @@
 
   backdrop-filter: blur(8px);
   background-color: rgba(31, 27, 46, 0.88);
+
+  display: none;
+
+  @media (max-width: 1160px) {
+    display: flex;
+  }
 }
 
 .button {

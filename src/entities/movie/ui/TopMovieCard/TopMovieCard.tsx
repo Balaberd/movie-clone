@@ -1,8 +1,8 @@
 import { FC } from "react";
 import cn from "classnames";
-import { Poster } from "@/shared";
 import Link from "next/link";
 import Image from "next/image";
+import { Poster } from "../../../../shared/ui/Poster/Poster";
 import styles from "./TopMovieCard.module.scss";
 
 interface Props {

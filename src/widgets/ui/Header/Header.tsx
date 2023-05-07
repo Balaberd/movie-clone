@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import cn from "classnames";
 import styles from "./Header.module.scss";
-import { HeaderMobile } from "../HeaderMobile/HeaderMobile";
+import { HeaderMobile } from "./HeaderMobile/HeaderMobile";
 
 export const Header: FC = () => (
   <header className={styles.header}>
@@ -64,6 +64,6 @@ export const Header: FC = () => (
     <Link className={cn(styles.link, styles.link_auth)} href="#">
       <div className={cn(styles.icon, styles.icon_auth)}></div>
     </Link>
-    <HeaderMobile className={styles.mobileBlock} />
+    <HeaderMobile />
   </header>
 );

@@ -8,6 +8,12 @@ const meta: Meta<typeof RatingLine> = {
   tags: ["autodocs"],
   parameters: {
     backgrounds: { default: "dark" },
+    docs: {
+      description: {
+        story:
+          "Компонент работает на подобии градусника, принимает пропсы rating и maxRating=10, стилизация осуществляется путем передачи миксинов",
+      },
+    },
   },
   argTypes: {
     rating: {

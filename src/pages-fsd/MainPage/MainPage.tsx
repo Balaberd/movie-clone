@@ -4,6 +4,7 @@ import cn from "classnames";
 import { BannerSlider, MovieSelectionByType, TopMovieSlider } from "@/widgets";
 import { ExpandedBlock } from "@/shared/ui/ExpandedBlock/ExpandedBlock";
 import Image from "next/image";
+import { Dropdown } from "@/shared/ui/Dropdown/Dropdown";
 import styles from "./MainPage.module.scss";
 
 export const MainPage: FC = () => (
@@ -37,6 +38,9 @@ export const MainPage: FC = () => (
         </Link>
       </section>
       <MovieSelectionByType type="Movie selector type" />
+      <Dropdown trigger={<button>CLICK ME</button>}>
+        <div>SOME CONYENT</div>
+      </Dropdown>
       <ExpandedBlock
         content={`
           Каждый день миллионы людей ищут фильмы онлайн, и никто не хочет усложнять себе жизнь – и вы наверняка один из них! А раз так, то Иви – это именно тот ресурс, который вам нужен. От лучших кинолент в HD-качестве вас отделяет буквально один клик. Мы не просто освобождаем от необходимости идти в кинотеатр или изучать программу телепередач – у посетителей нашего ресурса гораздо больше возможностей.

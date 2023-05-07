@@ -10,8 +10,8 @@ interface Props {
   className?: string;
   wrapperClass?: string;
   spaceBetween?: number;
-  slidesPerView: number;
-  slidesPerGroup: number;
+  slidesPerView?: number | "auto";
+  slidesPerGroup?: number;
   slideClass?: string;
   loop?: boolean;
   slideActiveClass?: string;
@@ -19,6 +19,7 @@ interface Props {
   bottonsClass?: string;
   buttonPrevClass?: string;
   buttonNextClass?: string;
+  breakpoints?: any;
 }
 
 export const Carusel: FC<Props> = ({
@@ -51,11 +52,8 @@ export const Carusel: FC<Props> = ({
         }}
       >
         {children.map((Item, index) => (
-          <SwiperSlide key={index} className={cn(styles.slide)}>
-            {({ isActive }) => {
-              const classes = isActive ? slideActiveClass : "";
-              return <div className={cn(slideClass, classes)}>{Item}</div>;
-            }}
+          <SwiperSlide key={index} className={cn(styles.slide, slideClass)}>
+            {Item}
           </SwiperSlide>
         ))}
       </Swiper>

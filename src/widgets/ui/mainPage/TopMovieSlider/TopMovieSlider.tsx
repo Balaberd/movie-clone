@@ -1,15 +1,17 @@
 import { FC } from "react";
 import { Carusel } from "@/shared/ui/Carusel/Carusel";
 import Image from "next/image";
-import { useResize } from "@/shared";
-import getMovieTopSliderSettings from "@/widgets/lib/helpers/getMovieTopSliderSettings";
 import styles from "./TopMovieSlider.module.scss";
 import { MOCK_TOP_MOVIES } from "./MOCK_TOP_MOVIES";
 
 export const TopMovieSlider: FC = () => {
-  const currentWidth = useResize();
-  const { slidesPerView, slidesPerGroup } =
-    getMovieTopSliderSettings(currentWidth);
+  const breakpoints = {
+    1160: { slidesPerView: 5, slidesPerGroup: 4 },
+    880: { slidesPerView: 4, slidesPerGroup: 3 },
+    600: { slidesPerView: 3, slidesPerGroup: 2 },
+    0: { slidesPerView: 2, slidesPerGroup: 1 },
+  };
+
   return (
     <div className={styles.wrapper}>
       <h4 className={styles.title}>
@@ -24,8 +26,7 @@ export const TopMovieSlider: FC = () => {
       <Carusel
         wrapperClass={styles.carusel}
         spaceBetween={24}
-        slidesPerView={slidesPerView}
-        slidesPerGroup={slidesPerGroup}
+        breakpoints={breakpoints}
       >
         {MOCK_TOP_MOVIES}
       </Carusel>

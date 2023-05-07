@@ -11,8 +11,6 @@ export const BannerSlider: FC = () => (
     spaceBetween={16}
     slidesPerView={3}
     slidesPerGroup={1}
-    slideClass={styles.slide}
-    slideActiveClass={styles.slide_active}
     bottonsClass={styles.button}
     buttonNextClass={styles.button_next}
     buttonPrevClass={styles.button_prev}

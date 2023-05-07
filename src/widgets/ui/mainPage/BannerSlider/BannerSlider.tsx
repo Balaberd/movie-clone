@@ -14,6 +14,7 @@ export const BannerSlider: FC = () => (
     bottonsClass={styles.button}
     buttonNextClass={styles.button_next}
     buttonPrevClass={styles.button_prev}
+    autoplay={{ delay: 6000 }}
   >
     {MOCK_BANNER_SLIDER}
   </Carusel>

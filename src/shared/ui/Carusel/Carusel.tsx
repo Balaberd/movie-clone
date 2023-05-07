@@ -1,6 +1,6 @@
 import { FC, ReactElement, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperType, Navigation } from "swiper";
+import { Swiper as SwiperType, Navigation, Autoplay } from "swiper";
 import "swiper/css";
 import cn from "classnames";
 import styles from "./Carusel.module.scss";
@@ -19,6 +19,7 @@ interface Props {
   bottonsClass?: string;
   buttonPrevClass?: string;
   buttonNextClass?: string;
+  autoplay?: any;
   breakpoints?: any;
 }
 
@@ -39,7 +40,8 @@ export const Carusel: FC<Props> = ({
     <div className={styles.carusel}>
       <Swiper
         {...props}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
+        speed={1000}
         navigation={{
           prevEl: prevButtonRef.current,
           nextEl: nextButtonRef.current,

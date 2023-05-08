@@ -16,7 +16,7 @@ export const Header: FC = () => (
       />
     </Link>
     <nav className={styles.navigate}>
-      <ul className={styles.list}>
+      <ul className={styles.navigateList}>
         <li>
           <Link className={styles.link} href="#">
             Мой Иви
@@ -29,7 +29,7 @@ export const Header: FC = () => (
         </li>
         <li>
           <Link className={styles.link} href="#">
-            Фильма
+            Фильмы
           </Link>
         </li>
         <li>

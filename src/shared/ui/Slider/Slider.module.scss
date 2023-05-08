@@ -1,12 +1,10 @@
 @import "@/shared/index.scss";
 
-.wrapper {
-  width: 100%;
-  padding: 24px 0;
+.slider {
+  position: relative;
 }
 
 .title {
-  margin-bottom: 8px;
   @include set-font(24px, 28px, 700);
   color: $color-sofia;
 
@@ -15,6 +13,11 @@
   gap: 8px;
 }
 
-.carusel {
-  padding: 16px 0;
+.sliderWrapper {
+  padding-top: 24px;
+  padding-bottom: 8px;
+}
+
+.unvisible {
+  visibility: hidden;
 }

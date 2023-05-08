@@ -1,14 +1,6 @@
 @import "../../index.scss";
 
-.carusel {
-  position: relative;
-}
-
-.slide {
-  width: 100%;
-}
-
-.navButton {
+.button {
   position: absolute;
   top: 0;
   height: 100%;
@@ -34,17 +26,13 @@
     }
   }
 
-  &.disabled {
-    visibility: hidden;
-  }
-
   &::before {
     position: absolute;
     top: 50%;
   }
 }
 
-.navButton_prev {
+.button_prev {
   left: -40px;
 
   &::before {
@@ -53,12 +41,11 @@
   }
 }
 
-.navButton_next {
+.button_next {
   right: -40px;
 
   &::before {
     content: "\E047";
-
     left: 8px;
   }
 }

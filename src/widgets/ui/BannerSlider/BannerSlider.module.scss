@@ -1,6 +1,6 @@
 @import "@/shared/index.scss";
 
-.carusel {
+.bannerSlider {
   width: $width-container * 3 + 32px;
   transform: translate($width-container * -1 - 16px);
 
@@ -9,12 +9,14 @@
     $width: 100%;
     transform: translate(calc(100vw * -1 + 48px));
   }
+  position: relative;
 }
 
 .button {
-  width: $width-container + 10px;
+  width: 33.2%;
 
   &_prev {
+    left: 0;
     background-image: linear-gradient(
       270deg,
       rgba(31, 27, 46, 0),
@@ -22,14 +24,10 @@
       rgba(31, 27, 46, 0.6),
       rgba(31, 27, 46, 0.72)
     );
-    left: calc($width-container * -1 - 16px);
-
-    &::before {
-      position: absolute;
-    }
   }
 
   &_next {
+    right: 0;
     background-image: linear-gradient(
       90deg,
       rgba(31, 27, 46, 0),
@@ -37,7 +35,5 @@
       rgba(31, 27, 46, 0.6),
       rgba(31, 27, 46, 0.72)
     );
-
-    right: calc($width-container * -1 - 16px);
   }
 }

@@ -21,7 +21,7 @@ export const Poster: FC<Props> = ({
     <Image
       className={styles.image}
       src={imageUrl}
-      alt={`постер к фильму ${title}`}
+      alt={`постер к фильму/актеру ${title}`}
       fill
     />
     {children}

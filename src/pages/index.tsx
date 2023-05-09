@@ -1,7 +1,49 @@
+import { useAppDispatch } from "@/app-fsd/hooks/redux";
+import {
+  getBannerMovies,
+  getSliderMovies,
+} from "@/entities/movie/model/moviesSlice";
 import { MainPage } from "@/pages-fsd";
 import Head from "next/head";
 
-export default function Home() {
+export async function getStaticProps() {
+  const response = await fetch("http://localhost:4000/movies/carousel");
+  const bannerData1 = await response.json();
+  const bannerData = bannerData1.map(({ id, name, avatars }) => ({
+    id,
+    title: name,
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sed fugit distinctio cupiditate dolorum illum, eaque neque!",
+    imageUrl: avatars,
+  }));
+
+  const response2 = await fetch("http://localhost:4000/movies/rec");
+  const sliderData1 = await response2.json();
+  console.log("!!!!!!!", sliderData1);
+  const sliderData = sliderData1.map(
+    ({ id, avatars, rating, years, genre, country, name, durations }) => ({
+      id,
+      imageUrl: avatars,
+      rating,
+      years,
+      genre,
+      country,
+      title: name,
+      durations,
+    })
+  );
+
+  return {
+    props: { bannerData, sliderData },
+  };
+}
+
+export default function Home(props) {
+  const dispatch = useAppDispatch();
+
+  dispatch(getBannerMovies(props.bannerData));
+  dispatch(getSliderMovies(props.sliderData));
+
   return (
     <>
       <Head>

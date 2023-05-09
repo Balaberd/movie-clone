@@ -9,25 +9,29 @@ interface Props {
   id: number;
   imageUrl: string;
   rating: number;
-  year: string;
-  ganre: string;
+  years: string;
+  genre: string;
   country: string;
   title: string;
-  duration: string;
+  durations: string;
 }
 
 export const MovieCard: FC<Props> = ({
   id,
   imageUrl,
   rating,
-  year,
-  ganre,
+  years,
+  genre,
   country,
   title,
-  duration,
+  durations,
 }) => (
   <Link className={styles.movieCard} href={`/movies/${id}`}>
-    <Poster classNames={cn(styles.poster)} imageUrl={imageUrl} title={title}>
+    <Poster
+      classNames={cn(styles.poster)}
+      imageUrl={`https://${imageUrl}`}
+      title={title}
+    >
       <div className={styles.movieProperties}>
         <div className={styles.actionBlock}>
           <div>1</div>
@@ -40,8 +44,8 @@ export const MovieCard: FC<Props> = ({
           <div className={styles.description}>
             <span
               className={styles.info}
-            >{`${year}, ${country}, ${ganre}`}</span>
-            <span className={styles.duration}>{duration}</span>
+            >{`${years}, ${country}, ${genre}`}</span>
+            <span className={styles.duration}>{durations}</span>
           </div>
         </div>
       </div>

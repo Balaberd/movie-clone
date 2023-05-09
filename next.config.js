@@ -4,7 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "thumbs.dfs.ivi.ru",
+        hostname: "*",
         port: "",
       },
     ],

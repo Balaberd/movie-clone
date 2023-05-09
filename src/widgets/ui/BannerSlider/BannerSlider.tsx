@@ -4,13 +4,16 @@ import { Swiper as SwiperType, Navigation, Autoplay } from "swiper";
 import cn from "classnames";
 import "swiper/css";
 import { SliderButtons } from "@/shared/ui/SliderButtons/SliderButtons";
+import { BannerCard } from "@/entities";
+import { useAppSelector } from "@/app-fsd/hooks/redux";
 import styles from "./BannerSlider.module.scss";
-import MOCK_BANNER_SLIDER from "./MOCK_BANNER_SLIDER";
 
 export const BannerSlider: FC = () => {
   const swiperRef = useRef<SwiperType>();
   const prevButtonRef = useRef(null);
   const nextButtonRef = useRef(null);
+
+  const movies = useAppSelector((state) => state.movies.banner);
 
   return (
     <div className={styles.bannerSlider}>
@@ -31,8 +34,16 @@ export const BannerSlider: FC = () => {
           swiperRef.current = swiper;
         }}
       >
-        {MOCK_BANNER_SLIDER.map((Item, index) => (
-          <SwiperSlide key={index}>{Item}</SwiperSlide>
+        {movies.map((movie) => (
+          <SwiperSlide key={movie.id}>
+            <BannerCard
+              key={movie.id}
+              id={movie.id}
+              title={movie.title}
+              description={movie.description}
+              imageUrl={movie.imageUrl}
+            />
+          </SwiperSlide>
         ))}
       </Swiper>
       <SliderButtons

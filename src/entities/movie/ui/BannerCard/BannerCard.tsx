@@ -22,11 +22,11 @@ export const BannerCard: FC<Props> = ({
   <Link href={`/movies/${id}`}>
     <Poster
       classNames={cn(styles.poster, className)}
-      imageUrl={imageUrl}
+      imageUrl={`https://${imageUrl}`}
       title={title}
     >
       <div className={styles.content}>
-        <h4 className={styles.title}>Заголовок</h4>
+        <h4 className={styles.title}>{title}</h4>
         <p className={styles.description}>{description}</p>
         <div className={styles.button}>Смотреть бесплатно</div>
       </div>
